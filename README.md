@@ -7,8 +7,19 @@ This library interfaces with the web services of various shipping carriers. The 
 - Tracking shipments
 - Purchasing shipping labels
 
+# Why does BNB have a fork of this?
+
+In early 2018, Shopify [removed](https://github.com/Shopify/active_shipping/commit/a9a2e04ccd12da40c748b8854604946aaf2f4616) the UPS carrier from their gem. People don't exactly know why but they [surmise](https://github.com/Shopify/active_shipping/issues/544#issuecomment-392957213) it may be related to Shopify's exclusive deal with UPS. _ugh_
+
+When Shopify removed UPS they never released a new version of the gem which is why BNB/MT have been happily using an old version of the gem that contained the UPS carrier.
+
+Now with an update to Rails 6 happening, this is a gem that needs to updated to support anything beyond Rails 5.1. So BNB has forked it and added the UPS carrier back to the code and we'll continue using it until such a time as UPS changes the API and it doesn't work.
+
+- WTC, January 2020
+
 ## Supported Shipping Carriers
 
+* [UPS](https://www.ups.com)
 * [USPS](http://www.usps.com)
 * [USPS Returns](http://returns.usps.com)
 * [FedEx](http://www.fedex.com)
